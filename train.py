@@ -391,7 +391,7 @@ def main(argv):
             print(f"epoch {epoch} is best now!")
             torch.save(net.state_dict(), os.path.join(args.save_path, 'epoch_' +'best' + '.pth.tar'))
 
-        if epoch % 1000 == 0:
+        if epoch % 500 == 0:
             torch.save(net.state_dict(), os.path.join(args.save_path, 'epoch_' + str(epoch) + '.pth.tar'))
 
 
